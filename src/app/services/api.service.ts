@@ -4,7 +4,7 @@ import { environment } from "src/environments/environment";
 import { Observable } from "rxjs";
 
 const API_URL = environment.urlServerMouadh;
-const api = "http://localhost:8080/consPaie/getPaie";
+const api = "http://192.168.2.196:8080/consPaie/getPaie";
 const httpOptions = {
   headers: new HttpHeaders({ "Content-Type": "application/json" }),
 };
@@ -69,4 +69,5 @@ export class ApiService {
   public GetBull(bulletin: any) {
     return this.httpClient.post<any>(api, bulletin);
   }
+
 }

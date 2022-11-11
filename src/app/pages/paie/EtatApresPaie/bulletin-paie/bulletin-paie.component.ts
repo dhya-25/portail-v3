@@ -14,7 +14,6 @@ import { Module } from "@ag-grid-community/core";
 export class BulletinPaieComponent implements OnInit {
 
   listInfo:any
-  ListTypeBull!:any[]
 
 
   api!: GridApi;
@@ -57,8 +56,6 @@ cod_typ_bul?:String;
       mat_pers:[this.tokenService.getUser().matpers,Validators.required],
       cod_soc:[this.tokenService.getUser().cod_soc],
     });
-
-    this. getTypeBull()
   }
 
 
@@ -287,20 +284,6 @@ cod_typ_bul?:String;
       console.log(error)
     }
   } */
-  getTypeBull(){
-    this.serv.GetTypeBull().subscribe(
-      (data: any) => {
-        this.ListTypeBull = data;
-
-      
-        console.log(this.ListTypeBull);
-
-      },
-      (error) => {
-        console.log(error);
-      }
-    );
-  }
 
   addHotel(){
         
